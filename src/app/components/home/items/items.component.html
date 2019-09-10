@@ -1,0 +1,26 @@
+<div class="body">
+        
+    <div class="container">      
+         
+        <div class="row justify-content-center">  
+            
+            <div *ngFor="let item of items" class="card col-2 items">     
+                <img class="row" src="{{item.img}}" height= 185px>
+                <p>{{item.name}}</p>
+                <p>Stocks: {{item.quantity}}</p>
+                <p >$<strong>{{item.price * qty[item.id]}}</strong></p>
+                <div class="row ">
+                    <p class="col-sm-4">Qty: </p><input class="col-sm-5 items" type="number" [(ngModel)]="qty[item.id]" value=1>
+                </div>
+                
+                <button class="btn btn-success" (click)="addToCart(item.id, item.name, qty[item.id], item.price)">Add to Cart</button>
+            
+                
+                          
+            </div>           
+            
+        </div>
+        
+    </div>
+</div>
+

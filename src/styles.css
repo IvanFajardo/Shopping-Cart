@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html body {
+    background-color: #e8d9f0;
+    
+}
+ .login-input {
+     margin-top: 3%;
+     height: 7vh;
+     
+ }
+
+ .card {
+     padding: 1%;
+     width: 40vw;
+ }
+
+.header {
+    margin-bottom: 10%;
+}
+
+.footer {
+    float: right;
+    margin-top: 15%;
+}
+

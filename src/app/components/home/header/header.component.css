@@ -1,0 +1,29 @@
+.navbar {
+    height: 15vh;;
+}
+
+.brand {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn {
+    background-color: white;
+}
+
+.cart {
+    margin-left: 30%;
+}
+
+.login-signup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1%;
+}
+
+.login-signup a{
+    color:white;
+}
+
+

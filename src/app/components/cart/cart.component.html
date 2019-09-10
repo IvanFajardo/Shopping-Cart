@@ -1,0 +1,45 @@
+<div class=" modal-body">
+    <div class="card-header">
+        <h4>Cart
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+        </h4>
+    </div>
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of cart | async; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>${{item.price * item.quantity}}</td>
+                    <td>
+                        <button style="float: right" (click)="removeFromCart(i)">Remove</button>
+                    </td>
+                    
+                </tr>
+
+            </tbody>
+        </table>
+        
+            
+    </div>
+
+    <div class="card-footer">
+        Total Price: {{totalPrice}}
+        <button class="btn btn-primary">Checkout</button>
+    </div>
+</div>

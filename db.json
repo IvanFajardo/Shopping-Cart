@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 1
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 2
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 3
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 4
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 5
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 6
+    },
+    {
+      "name": "Apple",
+      "price": 200,
+      "quantity": 1,
+      "img": "assets/images/image_ph.png",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "userName": "Pyro",
+      "password": "MTIzNDU2",
+      "id": 1
+    }
+  ]
+}

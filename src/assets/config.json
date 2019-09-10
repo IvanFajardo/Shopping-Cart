@@ -1,0 +1,5 @@
+{
+    "baseUrl": "http://localhost:5000/",
+    "itemsUrl": "http://localhost:5000/items/",
+    "usersUrl": "http://localhost:5000/users/"
+}

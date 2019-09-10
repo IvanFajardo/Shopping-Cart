@@ -1,0 +1,28 @@
+<div class="modal-body">
+        <div class="card-body">
+            <div class="row header">
+                <a class="h4 col-sm">Login</a>
+                <a class="h5 col-sm-3">Sign Up</a>
+            </div>
+            <form [formGroup] = "userForm">
+                <div class = "form-group">
+                    <input class = "form-control login-input" formControlName="userName"  type = "text" placeholder="Username">
+                    <input class = "form-control login-input" formControlName="password" type = "password" placeholder="Password">
+                </div>
+        
+                <div class="forgot-password">
+                    <a href= # class="h6">Forgot Password</a>
+                </div>
+        
+                <div class="footer">
+                    <button class="btn" (click)="close()">CANCEL</button>
+                    <button type="submit" (click)="loginUser()" class="btn btn-primary login-button">Login</button>
+                </div>
+
+            </form>
+    
+        </div>  
+    
+    </div>
+        
+    

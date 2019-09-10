@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark" style="background-color: #9744be;">
+        <div class="container-fluid" >
+          
+            <a class="col-sm-2 h3 text-light brand " >ShoppingCart</a>
+            <div class="row col-md-7">
+                <input class="col-sm form-control " type="text" placeholder="Search">
+                <input type="button" class="col-sm-2 form-control" value="SEARCH">
+            </div>
+            <div class="col-md">
+                <button class="btn cart" (click)="openModal(cart,'')" >Cart</button>
+            </div>
+            
+            <div class="text-light small login-signup">
+                <ng-container *ngIf="isAuth">
+                    <a>{{userData.userName}}</a><br>
+                    <a [routerLink]="" (click)="logout()">Logout</a>
+                    
+                </ng-container>
+                <ng-container *ngIf="!isAuth">
+                <a [routerLink]="" (click)="openModal(login,'')">Login </a> |
+                <a [routerLink]="" (click)="openModal(signup,'')"> Sign Up</a>
+                </ng-container>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- Modals -->
+
+<ng-template #cart let-modal>
+    <app-cart (closeModal)="closeModal($event)"></app-cart>
+</ng-template>
+
+<ng-template #login let-modal>
+    <app-login (closeModal)="closeModal($event)"></app-login>
+</ng-template>
+
+<ng-template #signup let-modal>
+    <app-register (closeModal)="closeModal($event)"></app-register>
+</ng-template>
