@@ -11,7 +11,7 @@ export class DatabaseService {
   config: any;
 
   constructor(private http: HttpClient, configService: ConfigService) { 
-    this.config = configService.getConfigs();
+    this.config = configService.getConfigs(); 
     this.baseUrl = this.config.baseUrl;
   }
 

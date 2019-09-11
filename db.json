@@ -2,51 +2,66 @@
   "items": [
     {
       "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "price": 50,
+      "quantity": 25,
+      "img": "assets/inventory/apple.jpg",
+      "info": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
       "id": 1
     },
     {
-      "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "name": "Grapes",
+      "price": 100,
+      "quantity": 200,
+      "img": "assets/inventory/grapes.jpg",
+      "info": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.",
       "id": 2
     },
     {
-      "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "name": "Hotdog",
+      "price": 20,
+      "quantity": 200,
+      "img": "assets/inventory/hotdog.jpg",
+      "info": "The hot dog or dog is a grilled or steamed link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It can also refer to the sausage itself. The sausage used is the wiener or frankfurter. The names of these sausages also commonly refer to their assembled sandwiches. ",
       "id": 3
     },
     {
-      "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "name": "REFURBISHED IphoneX 128Gb FHD",
+      "price": 10000,
+      "quantity": 5,
+      "img": "assets/inventory/iphone.jpg",
+      "info": "The iPhone X was Apple's flagship 10th anniversary iPhone featuring a 5.8-inch OLED display, facial recognition and 3D camera functionality, a glass body, and an A11 Bionic processor. Launched November 3, 2017, discontinued with the launch of the iPhone XR, XS, and XS Max.",
       "id": 4
     },
     {
-      "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "name": "Xiaomi Mi 9T Pro",
+      "price": 19000,
+      "quantity": 10,
+      "img": "assets/inventory/mi9.jpg",
+      "info": "Well, it’s finally here. Xiaomi’s flagship smartphone, the Mi 9T Pro has launched in the Philippines. It’s the global version of the Redmi K20 Pro for the Chinese market and features a 6.39-inch AMOLED screen, Snapdragon 855 chipset, and triple rear cameras.",
       "id": 5
     },
     {
-      "name": "Apple",
+      "name": "Samsung Galaxy Note 10",
       "price": 200,
       "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "img": "assets/inventory/note.jpg",
+      "info": "The Note 10 has a 6.3-inch AMOLED display with a Full HD resolution, coming in at 2280 x 1080 pixels, with 401 pixels per inch. It includes HDR 10+ technology, and considering that Samsung hasn't opted for a QHD display here we're impressed with how the display looks.",
       "id": 6
     },
     {
-      "name": "Apple",
-      "price": 200,
-      "quantity": 1,
-      "img": "assets/images/image_ph.png",
+      "name": "Orange",
+      "price": 60,
+      "quantity": 100,
+      "img": "assets/inventory/orange.jpg",
+      "info": "The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae, native to China. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually; varieties of sweet orange arise through mutations.",
+      "id": 7
+    },
+    {
+      "name": "Rice",
+      "price": 60,
+      "quantity": 100,
+      "img": "assets/inventory/rice.jpg",
+      "info": "Rice is the seed of the grass species Oryza sativa or Oryza glaberrima. As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population, especially in Asia. It is the agricultural commodity with the third-highest worldwide production, after sugarcane and maize.",
       "id": 7
     }
   ],

@@ -7,7 +7,7 @@
                 <input type="button" class="col-sm-2 form-control" value="SEARCH">
             </div>
             <div class="col-md">
-                <button class="btn cart" (click)="openModal(cart,'')" >Cart</button>
+                <button type="button" class="btn cart btn-primary" (click)="openModal(cart,'')" >Cart <span class="badge badge-light">{{totalItems}}</span></button>
             </div>
             
             <div class="text-light small login-signup">

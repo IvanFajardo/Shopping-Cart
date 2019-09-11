@@ -20,8 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CustomerReducer } from 'src/store/customer.reducer';
-import { CustomerEffects } from 'src/store/customer.effects';
+import { CartReducer } from 'src/store/cart.reducer';
+import { CartEffects } from 'src/store/cart.effects';
+import { InventoryReducer } from 'src/store/inventory.reducer';
+import { InventoryEffects } from 'src/store/inventory.effects';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,10 @@ import { CustomerEffects } from 'src/store/customer.effects';
     ReactiveFormsModule,
     NgbModule,
     StoreModule.forRoot({
-      customer: CustomerReducer
+      cart: CartReducer,
+      inventory: InventoryReducer
     }),
-    EffectsModule.forRoot([CustomerEffects])
+    EffectsModule.forRoot([CartEffects, InventoryEffects])
   ],
   providers: [DatabaseService, ConfigService,
     {

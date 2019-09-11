@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/services/database.service';
 import { Store, select } from '@ngrx/store';
-import { CustomerAdd} from 'src/store/customer.action';
+import { CartAdd} from 'src/store/cart.action';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/models/item';
+import { FormControl, Validators } from '@angular/forms';
+import { InventoryGet } from 'src/store/inventory.action';
 
 
 @Component({
@@ -29,6 +31,15 @@ export class ItemsComponent implements OnInit {
     
   }
 
+
+  showInfo(popover) {
+    if (popover.isOpen()) {
+      popover.close();
+    } else {
+      popover.open();
+    }
+  }
+
   getItems(){
     this.databaseService.getJson('items').subscribe(data => {
       this.items = data;
@@ -37,6 +48,10 @@ export class ItemsComponent implements OnInit {
       this.qty = new Array(this.items.length + 1);
       this.qty.fill(1);
     });
+    // this.store.dispatch(new InventoryGet(''));
+    // this.store.pipe(select('inventory')).subscribe(data => {
+    //   this.items = data;
+    // });
   }
 
   addToCart(id, name, qty, price) {
@@ -45,10 +60,21 @@ export class ItemsComponent implements OnInit {
     item.name = name;
     item.quantity = qty;
     item.price = price;
-    this.store.dispatch(new CustomerAdd(item));
+    this.store.dispatch(new CartAdd(item));
   }
 
-  
+  addQty(id, max) {
+    if (this.qty[id] < max) {
+      this.qty[id] += 1;
+    }
+    
+  }
+
+  removeQty(id) {
+    if (this.qty[id] > 1) {
+    this.qty[id] -= 1;
+    }
+  } 
 
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Item } from 'src/app/models/item';
-import { CustomerRemove } from 'src/store/customer.action';
+import { CartRemove } from 'src/store/cart.action';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -16,10 +16,12 @@ export class CartComponent implements OnInit {
   private totalPrice;
 
   constructor(private store: Store<Item[]>) {
-    this.cart = store.pipe(select('customer'));
+    
+    this.cart = store.pipe(select('cart'));
   }
 
   ngOnInit() {
+
     this.getTotal();
   }
 
@@ -29,7 +31,8 @@ export class CartComponent implements OnInit {
 
   removeFromCart(i) {
 
-    this.store.dispatch(new CustomerRemove(i));
+    this.store.dispatch(new CartRemove(i));
+    this.getTotal();
   }
 
   getTotal() {

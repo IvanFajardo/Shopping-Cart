@@ -1,4 +1,4 @@
-<div class=" modal-body">
+<div class="modal-body">
     <div class="card-header">
         <h4>Cart
             <button type="button" class="close" aria-label="Close" (click)="close()">
@@ -9,18 +9,19 @@
 
     <div class="card-body">
         <table class="table">
-            <thead>
+            <thead style="position: relative; display: block">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Item Name</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Price</th>
-                    <th scope="col"></th>
+                    <th scope="col"> </th>
 
                 </tr>
             </thead>
-
-            <tbody>
+            
+            <tbody style="display: block; height: 50vh; overflow-y: scroll">
+                
                 <tr *ngFor="let item of cart | async; let i=index">
                     <td>{{i+1}}</td>
                     <td>{{item.name}}</td>
@@ -31,15 +32,20 @@
                     </td>
                     
                 </tr>
+            
 
             </tbody>
+            
         </table>
         
             
     </div>
 
     <div class="card-footer">
-        Total Price: {{totalPrice}}
-        <button class="btn btn-primary">Checkout</button>
+        <div class="row">
+            <p class="col-sm">Price: <b>${{totalPrice}}</b></p> 
+            <button class="btn btn-primary col-sm-3">Checkout</button>
+        </div>
+        
     </div>
 </div>

@@ -11,7 +11,6 @@ export class ConfigService {
   constructor(private http: HttpClient) { }
 
   getConfigs() {
-    console.log(this.configurations);
     return this.configurations;
   }
 
