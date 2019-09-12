@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Item } from 'src/app/models/item';
-import { CartRemove } from 'src/store/cart.action';
+import { CartRemove } from 'src/app/store/cart.action';
 import { Observable } from 'rxjs';
 
 @Component({

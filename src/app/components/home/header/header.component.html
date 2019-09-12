@@ -12,7 +12,7 @@
             
             <div class="text-light small login-signup">
                 <ng-container *ngIf="isAuth">
-                    <a>{{userData.userName}}</a><br>
+                    <a [routerLink]="" (click)="openModal(profile,'')">{{userData.userName}}</a><br>
                     <a [routerLink]="" (click)="logout()">Logout</a>
                     
                 </ng-container>
@@ -37,4 +37,8 @@
 
 <ng-template #signup let-modal>
     <app-register (closeModal)="closeModal($event)"></app-register>
+</ng-template>
+
+<ng-template #profile let-modal>
+    <app-profile (closeModal)="closeModal($event)"></app-profile>
 </ng-template>

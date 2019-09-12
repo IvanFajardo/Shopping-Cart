@@ -6,17 +6,23 @@ export function InventoryReducer(state = initialState, action: ActionEx){
     let store;
     switch (action.type) {
         case InventoryActionTypes.Get:
-          store = [...state, action.payload];
-          saveState('inventoryItems', store);
-          return store ;
+          // saveState('inventoryItems', store);
+          console.log('Get: ' + store);
+          return action.payload ;
+        
+        case InventoryActionTypes.GetSuccess:
+          console.log('Success: ' + action.payload);
+          
+          return action.payload ;
+
         default:
-          return loadState(state);
+          return state;
     }
 }
 
-function saveState(token, state){
-  localStorage.setItem(token, JSON.stringify(state));
-}
+// function saveState(token, state){
+//   localStorage.setItem(token, JSON.stringify(state));
+// }
 
 function loadState(state) {
   if (localStorage.getItem('inventoryItems')){

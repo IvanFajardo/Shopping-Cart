@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/services/database.service';
 import { Store, select } from '@ngrx/store';
-import { CartAdd} from 'src/store/cart.action';
+import { CartAdd} from 'src/app/store/cart.action';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/models/item';
 import { FormControl, Validators } from '@angular/forms';
-import { InventoryGet } from 'src/store/inventory.action';
+import { InventoryGet } from 'src/app/store/inventory.action';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -41,17 +42,17 @@ export class ItemsComponent implements OnInit {
   }
 
   getItems(){
-    this.databaseService.getJson('items').subscribe(data => {
+
+
+    this.store.dispatch(new InventoryGet(''));
+
+    this.store.select('inventory').subscribe(data => {
       this.items = data;
-      console.log(data);
-      
+
       this.qty = new Array(this.items.length + 1);
       this.qty.fill(1);
+      
     });
-    // this.store.dispatch(new InventoryGet(''));
-    // this.store.pipe(select('inventory')).subscribe(data => {
-    //   this.items = data;
-    // });
   }
 
   addToCart(id, name, qty, price) {

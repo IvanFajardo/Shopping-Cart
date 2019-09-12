@@ -20,10 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CartReducer } from 'src/store/cart.reducer';
-import { CartEffects } from 'src/store/cart.effects';
-import { InventoryReducer } from 'src/store/inventory.reducer';
-import { InventoryEffects } from 'src/store/inventory.effects';
+import { CartReducer } from 'src/app/store/cart.reducer';
+import { CartEffects } from 'src/app/store/cart.effects';
+import { InventoryReducer } from 'src/app/store/inventory.reducer';
+import { InventoryEffects } from 'src/app/store/inventory.effects';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { InventoryEffects } from 'src/store/inventory.effects';
     RegisterComponent,
     HeaderComponent,
     ItemsComponent,
-    CartComponent
+    CartComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -48,13 +50,13 @@ import { InventoryEffects } from 'src/store/inventory.effects';
     }),
     EffectsModule.forRoot([CartEffects, InventoryEffects])
   ],
-  providers: [DatabaseService, ConfigService,
+  providers: [ConfigService,
     {
       provide: APP_INITIALIZER,
       useFactory: loadConfigurations,
       deps: [ConfigService],
       multi: true
-    }, AuthGuardGuard, AuthService],
+    }, AuthGuardGuard, AuthService, DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

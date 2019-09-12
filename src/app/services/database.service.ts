@@ -12,7 +12,9 @@ export class DatabaseService {
 
   constructor(private http: HttpClient, configService: ConfigService) { 
     this.config = configService.getConfigs(); 
-    this.baseUrl = this.config.baseUrl;
+    this.baseUrl = 'http://localhost:5000/' ;
+    // this.baseUrl = this.config.baseUrl;
+    
   }
 
   getHeaders() {
