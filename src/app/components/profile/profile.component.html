@@ -1,0 +1,99 @@
+<div class="modal-body">
+    <div class="card-header">
+        <h4>Profile
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+        </h4>
+    </div>
+
+    <div class="card-body">
+        
+        <div [hidden]="onChangePass">
+            <form [formGroup]='profileForm'>
+                <div class="row">
+                    <p class="col-sm-3">Name: </p> 
+                    <input type="text" formControlName='name' class="form-control"  [hidden]="!onEdit">
+                    <div [hidden]="onEdit">{{customerData.name ? customerData.name : '&lt;Not Registered&gt;'}}</div>
+        
+                    <!-- <button class="col-sm-5 btn btn-primary">Enter Full Name</button> -->
+                </div>
+        
+                <div class="row">
+                    <p class="col-sm-3">Address:</p>
+                    <input type="text" formControlName='address' class="form-control" [hidden]="!onEdit">
+                    <div [hidden]="onEdit">{{customerData.address ? customerData.address : '&lt;Not Registered&gt;'}}</div> 
+                    <!-- <button class="col-sm-6  btn btn-primary">Enter Shipping Address</button> -->
+                </div>
+                
+                <div class="row">
+        
+                    <p class="col-sm-5">Payment Method:</p>
+                    <select [hidden]="!onEdit" formControlName="paymentMethod" class="form-control col-sm-6">
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Master Card">Master Card</option>
+        
+                    </select>
+                    <div [hidden]="onEdit">{{customerData.paymentMethod ? customerData.paymentMethod : '&lt;Not Registered&gt;'}}</div> 
+                    <!-- <button class="col-sm-6 btn btn-primary">Set Payment Method</button> -->
+        
+        
+                </div>
+                
+                <div [hidden]="onEdit">
+                    <button class="btn btn-primary" (click)="toggleOnChangePass()">Change Password</button>
+                    <button class="btn btn-primary" (click)="toggleOnEdit()">Edit Details</button>
+                </div>
+        
+                <div [hidden]="!onEdit" class="row">
+                    <a class="buttons col-sm" [routerLink]="" (click)="toggleOnEdit()">Cancel</a>
+                    <button class="btn btn-primary col-sm-5" (click)="saveChanges()">Save Changes</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container" [hidden]=!onChangePass>
+            <form [formGroup]="passForm">
+                <div class="row">
+                    <p class="col-sm-5">Old Password: </p> 
+                    <input type="text" formControlName='oldPass' class="form-control">
+                </div>
+
+                <div class="row">
+                    <p class="col-sm-5">New Password: </p> 
+                    <input type="text" formControlName="newPass" class="form-control">
+                </div>
+
+                <div class="row">
+                    <p class="col-sm-5">ReType Password: </p> 
+                    <input type="text" formControlName="rePass" class="form-control">
+                </div>
+
+                
+                <div class="row">
+                        <a class="buttons col-sm" [routerLink]="" (click)="toggleOnChangePass()">Cancel</a>
+                        <button class="col-sm-5 buttons btn btn-primary" (click)="changePass()">Change Password</button>
+                </div>
+            </form>
+            
+            
+
+            
+
+        </div>
+        
+        
+        
+            
+    </div>
+
+    <!-- <div class="card-footer">
+        <div class="row">
+            <p class="col-sm">Price: <b>${{totalPrice}}</b></p> 
+            <button class="btn btn-primary col-sm-3">Checkout</button>
+        </div>
+        
+    </div> -->
+</div>

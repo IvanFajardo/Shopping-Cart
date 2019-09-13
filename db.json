@@ -67,9 +67,13 @@
   ],
   "users": [
     {
+      "id": 1,
       "userName": "Pyro",
-      "password": "MTIzNDU2",
-      "id": 1
+      "password": "MTIzNDU2Nw==",
+      "name": "ivan",
+      "address": "123123123",
+      "paymentMethod": "Credit Card"
     }
-  ]
+  ],
+  "orders":
 }

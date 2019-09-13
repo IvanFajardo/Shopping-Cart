@@ -20,11 +20,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CartReducer } from 'src/app/store/cart.reducer';
-import { CartEffects } from 'src/app/store/cart.effects';
-import { InventoryReducer } from 'src/app/store/inventory.reducer';
-import { InventoryEffects } from 'src/app/store/inventory.effects';
-import { ProfileComponent } from './profile/profile.component';
+import { CartReducer } from 'src/app/store/cart/cart.reducer';
+import { CartEffects } from 'src/app/store/cart/cart.effects';
+import { InventoryReducer } from 'src/app/store/inventory/inventory.reducer';
+import { InventoryEffects } from 'src/app/store/inventory/inventory.effects';
+import { ProfileComponent } from './components/profile/profile.component';
+import { CustomerReducer } from './store/customer/customer.reducer';
+import { CustomerEffects } from './store/customer/customer.effects';
 
 @NgModule({
   declarations: [
@@ -46,9 +48,10 @@ import { ProfileComponent } from './profile/profile.component';
     NgbModule,
     StoreModule.forRoot({
       cart: CartReducer,
-      inventory: InventoryReducer
+      inventory: InventoryReducer,
+      customer: CustomerReducer
     }),
-    EffectsModule.forRoot([CartEffects, InventoryEffects])
+    EffectsModule.forRoot([CartEffects, InventoryEffects, CustomerEffects])
   ],
   providers: [ConfigService,
     {

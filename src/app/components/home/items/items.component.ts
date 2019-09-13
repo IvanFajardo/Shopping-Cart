@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/services/database.service';
 import { Store, select } from '@ngrx/store';
-import { CartAdd} from 'src/app/store/cart.action';
+import { CartAdd} from 'src/app/store/cart/cart.action';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/models/item';
 import { FormControl, Validators } from '@angular/forms';
-import { InventoryGet } from 'src/app/store/inventory.action';
+import { InventoryGet } from 'src/app/store/inventory/inventory.action';
 import { map } from 'rxjs/operators';
 
 

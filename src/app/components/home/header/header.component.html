@@ -1,6 +1,5 @@
 <nav class="navbar navbar-dark" style="background-color: #9744be;">
-        <div class="container-fluid" >
-          
+        <div class="container-fluid" >          
             <a class="col-sm-2 h3 text-light brand " >ShoppingCart</a>
             <div class="row col-md-7">
                 <input class="col-sm form-control " type="text" placeholder="Search">
@@ -10,9 +9,14 @@
                 <button type="button" class="btn cart btn-primary" (click)="openModal(cart,'')" >Cart <span class="badge badge-light">{{totalItems}}</span></button>
             </div>
             
-            <div class="text-light small login-signup">
+            <div class="text-light small login-signup" ngbDropdown>
                 <ng-container *ngIf="isAuth">
-                    <a [routerLink]="" (click)="openModal(profile,'')">{{userData.userName}}</a><br>
+                    <a [routerLink]="" (click)="openModal(profile,'')" id="dropdownBasic1" ngbDropdownToggle>{{userData.userName}}</a><br>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button ngbDropdownItem>Action - 1</button>
+                            <button ngbDropdownItem>Another Action</button>
+                            <button ngbDropdownItem>Something else is here</button>
+                          </div>
                     <a [routerLink]="" (click)="logout()">Logout</a>
                     
                 </ng-container>
@@ -40,5 +44,6 @@
 </ng-template>
 
 <ng-template #profile let-modal>
-    <app-profile (closeModal)="closeModal($event)"></app-profile>
+    <app-profile (closeModal)="closeModal($event)" [userData]="userData"></app-profile>
 </ng-template>
+

@@ -10,10 +10,6 @@ export class ConfigService {
 
   constructor(private http: HttpClient) { }
 
-  getConfigs() {
-    return this.configurations;
-  }
-
   loadConfigs() {
     return new Promise((resolve, reject) => {
       this.http.get('assets/config.json')
@@ -21,6 +17,7 @@ export class ConfigService {
         .then(
           res => {
             this.configurations = res;
+            localStorage.setItem('Urls', JSON.stringify(this.configurations));
             resolve();
           }
         );
