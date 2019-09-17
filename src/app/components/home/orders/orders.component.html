@@ -1,0 +1,13 @@
+<div class="body">
+    <div class="container bg-light">
+        <p class="h2">My Orders</p>
+        <div *ngFor= "let order of orders; let i=index " class="card">
+            {{order.date | date: 'short'}}
+            <div *ngFor = "let item of order.item; let i=index" >
+                {{i+1}} {{item.name}}
+
+            </div>
+            
+        </div>
+    </div>
+</div>

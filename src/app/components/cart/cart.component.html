@@ -9,23 +9,27 @@
 
     <div class="card-body">
         <table class="table">
-            <thead style="position: relative; display: block">
+            <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Item Name</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Price</th>
-                    <th scope="col"> </th>
+                    <th scope="col"></th>
 
                 </tr>
             </thead>
             
-            <tbody style="display: block; height: 50vh; overflow-y: scroll">
+            <tbody>
                 
-                <tr *ngFor="let item of cart | async; let i=index">
+                <tr *ngFor="let item of cart; let i=index">
                     <td>{{i+1}}</td>
                     <td>{{item.name}}</td>
-                    <td>{{item.quantity}}</td>
+                    <td>
+                        <button class="btn" (click)="editQty(item.id,'remove')">&lt;</button>
+                        <span class="qty border border-secondary">{{item.quantity}}</span>
+                        <button class="btn" (click)="editQty(item.id,'add')">&gt;</button>
+                    </td>
                     <td>${{item.price * item.quantity}}</td>
                     <td>
                         <button style="float: right" (click)="removeFromCart(i)">Remove</button>
@@ -44,7 +48,7 @@
     <div class="card-footer">
         <div class="row">
             <p class="col-sm">Price: <b>${{totalPrice}}</b></p> 
-            <button class="btn btn-primary col-sm-3">Checkout</button>
+            <button class="btn btn-primary col-sm-3" (click)="checkOut()">Checkout</button>
         </div>
         
     </div>

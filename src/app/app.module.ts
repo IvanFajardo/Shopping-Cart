@@ -27,6 +27,9 @@ import { InventoryEffects } from 'src/app/store/inventory/inventory.effects';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CustomerReducer } from './store/customer/customer.reducer';
 import { CustomerEffects } from './store/customer/customer.effects';
+import { OrdersComponent } from './components/home/orders/orders.component';
+import { OrdersReducer } from './store/orders/orders.reducer';
+import { OrdersEffects } from './store/orders/orders.effects';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { CustomerEffects } from './store/customer/customer.effects';
     HeaderComponent,
     ItemsComponent,
     CartComponent,
-    ProfileComponent
+    ProfileComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +53,10 @@ import { CustomerEffects } from './store/customer/customer.effects';
     StoreModule.forRoot({
       cart: CartReducer,
       inventory: InventoryReducer,
-      customer: CustomerReducer
+      customer: CustomerReducer,
+      orders: OrdersReducer
     }),
-    EffectsModule.forRoot([CartEffects, InventoryEffects, CustomerEffects])
+    EffectsModule.forRoot([CartEffects, InventoryEffects, CustomerEffects, OrdersEffects])
   ],
   providers: [ConfigService,
     {

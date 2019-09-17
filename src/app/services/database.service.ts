@@ -12,13 +12,14 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { 
     this.config = JSON.parse(localStorage.getItem('Urls'));
-    this.baseUrl = this.config.baseUrl;
+    this.baseUrl = 'http://localhost:5000/';
     
   }
 
   getHeaders() {
       const headers = new HttpHeaders();
       headers.set('Content-type', 'application/json');
+      
       return headers;
     }
 
@@ -29,7 +30,7 @@ export class DatabaseService {
     
   addJson(type, data) {
     const headers = this.getHeaders();
-    return this.http.post(this.baseUrl + (type + '/') ,  data  , { headers });
+    return this.http.post(this.baseUrl + type ,  data  , { headers });
   }
 
   updateJson(type, id, data) {

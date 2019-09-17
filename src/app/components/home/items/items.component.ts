@@ -18,6 +18,8 @@ export class ItemsComponent implements OnInit {
 
   private items;
   private qty;
+  private cart;
+
  
 
   constructor(private databaseService: DatabaseService, private store: Store<{cart: Item[]}>) {
@@ -26,7 +28,10 @@ export class ItemsComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.store.select('cart').subscribe(data => {
+      this.cart = data;
+    }
+    );
     this.getItems();
 
     
@@ -59,9 +64,23 @@ export class ItemsComponent implements OnInit {
     const item = new Item();
     item.id = id;
     item.name = name;
-    item.quantity = qty;
+    item.quantity = qty;  
     item.price = price;
-    this.store.dispatch(new CartAdd(item));
+    let newCart = [];
+    
+
+    this.cart.forEach(element => {
+      if (id === element.id) {
+        item.quantity = qty + element.quantity;
+      } else {
+        newCart.push(element);
+      }
+
+    });
+    newCart.push(item);
+    console.log(newCart);
+    
+    this.store.dispatch(new CartAdd(newCart));
   }
 
   addQty(id, max) {

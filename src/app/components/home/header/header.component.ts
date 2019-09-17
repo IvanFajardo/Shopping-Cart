@@ -16,21 +16,27 @@ export class HeaderComponent implements OnInit {
   private cart: Observable<Item[]>;
   private totalItems: number;
   constructor(private modalService: NgbModal, private store: Store<{cart: Item[]}>) {
-    this.cart = store.pipe(select('cart'));
+    this.cart = store.select('cart');
   }
 
   ngOnInit() {
     console.log(this.userData);
     this.cart.subscribe(item => {
-      this.totalItems = item.length;
+      if (item) {
+        this.totalItems = item.length;
+      } else {
+        this.totalItems = 0;
+      }
 
     });
 
 
   }
 
-  openModal(content, data?) {
-    this.modalService.open(content);
+  openModal(content) {
+    console.log(content);
+    
+    this.modalService.open(content, {size: 'lg'});
 
   }
 

@@ -6,9 +6,10 @@ export function CartReducer(state = initialState, action: ActionEx){
     let store;
     switch (action.type) {
         case CartActionTypes.Add:
-          store = [...state, action.payload];
+          store = action.payload;
           saveState('cartItems', store);
           return store ;
+
         case CartActionTypes.Remove:
           store = [
             ...state.slice(0, action.payload),
@@ -16,6 +17,16 @@ export function CartReducer(state = initialState, action: ActionEx){
           ];
           saveState('cartItems', store);
           return store;
+        
+        case CartActionTypes.Checkout:
+          return action.payload;
+        
+        case CartActionTypes.CheckoutSuccess:
+          store = [];
+          saveState('cartItems', store);
+          return store;
+
+
         default:
           return loadState(state);
     }

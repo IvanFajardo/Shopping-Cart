@@ -70,10 +70,92 @@
       "id": 1,
       "userName": "Pyro",
       "password": "MTIzNDU2Nw==",
-      "name": "ivan",
+      "name": "Ivan",
       "address": "123123123",
       "paymentMethod": "Credit Card"
     }
   ],
-  "orders":
+  "orders": [
+    {
+      "userId": "Pyro",
+      "date": "2019-09-17T08:51:06.955Z",
+      "item": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 1,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        },
+        {
+          "id": 4,
+          "name": "REFURBISHED IphoneX 128Gb FHD",
+          "quantity": 1,
+          "price": 10000
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": "Pyro",
+      "date": "2019-09-17T08:51:23.867Z",
+      "item": [
+        {
+          "id": 5,
+          "name": "Xiaomi Mi 9T Pro",
+          "quantity": 1,
+          "price": 19000
+        },
+        {
+          "id": 4,
+          "name": "REFURBISHED IphoneX 128Gb FHD",
+          "quantity": 1,
+          "price": 10000
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": "Pyro",
+      "date": "2019-09-17T08:51:26.931Z",
+      "item": [
+        {
+          "id": 5,
+          "name": "Xiaomi Mi 9T Pro",
+          "quantity": 1,
+          "price": 19000
+        },
+        {
+          "id": 4,
+          "name": "REFURBISHED IphoneX 128Gb FHD",
+          "quantity": 1,
+          "price": 10000
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        }
+      ],
+      "id": 3
+    }
+  ]
 }
