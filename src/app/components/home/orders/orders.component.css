@@ -1,3 +1,12 @@
 .body {
     margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.table {
+    text-align: center;
+} 
+
+.container {
+    padding: 5%;
 }

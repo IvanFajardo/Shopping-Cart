@@ -32,7 +32,7 @@
                     </td>
                     <td>${{item.price * item.quantity}}</td>
                     <td>
-                        <button style="float: right" (click)="removeFromCart(i)">Remove</button>
+                        <button style="float: right" (click)="removeFromCart(i,item.id,item.quantity)">Remove</button>
                     </td>
                     
                 </tr>

@@ -37,4 +37,9 @@ export class DatabaseService {
     const headers = this.getHeaders();
     return this.http.put(this.baseUrl + (type + '/' + id) ,  data  , { headers });
   }
+
+  delJson(type, id) {
+    const headers = this.getHeaders();
+    return this.http.delete(this.baseUrl + (type + '/' + id) , { headers });
+  }
 }

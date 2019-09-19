@@ -21,6 +21,14 @@ export class ProfileComponent implements OnInit {
   constructor(private store: Store<any>) { }
 
   ngOnInit() {
+    this.store.select('customer').subscribe(data => {
+      this.customerData = data;
+      this.profileForm = new FormGroup({
+        name: new FormControl(this.customerData.name || ''),
+        address: new FormControl(this.customerData.address || ''),
+        paymentMethod: new FormControl(this.customerData.paymentMethod || '')
+      });
+    });
     this.getCustomer(this.userData.id);
     this.onEdit = this.onChangePass = false;
     this.passForm = new FormGroup({
@@ -33,16 +41,6 @@ export class ProfileComponent implements OnInit {
   getCustomer(id){
     this.store.dispatch(new CustomerGet(id));
 
-    this.store.select('customer').subscribe(data => {
-      this.customerData = data; 
-      
-      this.profileForm = new FormGroup({
-        name: new FormControl(this.customerData.name || ''),
-        address: new FormControl(this.customerData.address || ''),
-        paymentMethod: new FormControl(this.customerData.paymentMethod || '')
-      });
-      
-    });
   }
 
   updateCustomer(id) {

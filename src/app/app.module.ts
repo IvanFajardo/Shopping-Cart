@@ -30,6 +30,8 @@ import { CustomerEffects } from './store/customer/customer.effects';
 import { OrdersComponent } from './components/home/orders/orders.component';
 import { OrdersReducer } from './store/orders/orders.reducer';
 import { OrdersEffects } from './store/orders/orders.effects';
+import { SearchStore } from './store/search/search.action';
+import { SearchReducer } from './store/search/search.reducer';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { OrdersEffects } from './store/orders/orders.effects';
       cart: CartReducer,
       inventory: InventoryReducer,
       customer: CustomerReducer,
-      orders: OrdersReducer
+      orders: OrdersReducer,
+      search: SearchReducer
     }),
     EffectsModule.forRoot([CartEffects, InventoryEffects, CustomerEffects, OrdersEffects])
   ],

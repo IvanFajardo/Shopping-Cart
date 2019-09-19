@@ -2,16 +2,15 @@
     <div class="card-body">
         <div class="row header">
             <a class="h4 col-sm">Sign Up</a>
-            <a class="h5 col-sm-2">Login</a>
         </div>
         <form [formGroup]= "userForm">
             <div class = "form-group" >
                 <input class = "form-control login-input" formControlName="userName" type = "text" placeholder="Username">
                 <input class = "form-control login-input" formControlName = "password" type = "password" placeholder="Password">
-                <input class = "form-control login-input" formControlName= "rePassword" type = "password" placeholder="Confirm Password">
+                <input class = "form-control login-input" formControlName= "rePassword" type = "password" placeholder="Confirm Password" >
                 <div class="container fluid">
                     <div class="row">
-                        <input class = "col-sm-8 form-control login-input" formControlName="captcha" type = "text" placeholder="Please enter the code">
+                        <input class = "col-sm-8 form-control login-input" formControlName="captcha" type = "text" placeholder="Please enter the code" >
                         <img class="col-sm-4" src="assets/images/captcha_ph.png" height="60px">
                     </div>
                 </div>

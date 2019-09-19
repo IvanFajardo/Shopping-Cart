@@ -3,7 +3,7 @@
     {
       "name": "Apple",
       "price": 50,
-      "quantity": 25,
+      "quantity": 28,
       "img": "assets/inventory/apple.jpg",
       "info": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "Grapes",
       "price": 100,
-      "quantity": 200,
+      "quantity": 166,
       "img": "assets/inventory/grapes.jpg",
       "info": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.",
       "id": 2
@@ -19,7 +19,7 @@
     {
       "name": "Hotdog",
       "price": 20,
-      "quantity": 200,
+      "quantity": 158,
       "img": "assets/inventory/hotdog.jpg",
       "info": "The hot dog or dog is a grilled or steamed link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It can also refer to the sausage itself. The sausage used is the wiener or frankfurter. The names of these sausages also commonly refer to their assembled sandwiches. ",
       "id": 3
@@ -27,7 +27,7 @@
     {
       "name": "REFURBISHED IphoneX 128Gb FHD",
       "price": 10000,
-      "quantity": 5,
+      "quantity": 1,
       "img": "assets/inventory/iphone.jpg",
       "info": "The iPhone X was Apple's flagship 10th anniversary iPhone featuring a 5.8-inch OLED display, facial recognition and 3D camera functionality, a glass body, and an A11 Bionic processor. Launched November 3, 2017, discontinued with the launch of the iPhone XR, XS, and XS Max.",
       "id": 4
@@ -35,7 +35,7 @@
     {
       "name": "Xiaomi Mi 9T Pro",
       "price": 19000,
-      "quantity": 10,
+      "quantity": -66,
       "img": "assets/inventory/mi9.jpg",
       "info": "Well, it’s finally here. Xiaomi’s flagship smartphone, the Mi 9T Pro has launched in the Philippines. It’s the global version of the Redmi K20 Pro for the Chinese market and features a 6.39-inch AMOLED screen, Snapdragon 855 chipset, and triple rear cameras.",
       "id": 5
@@ -51,7 +51,7 @@
     {
       "name": "Orange",
       "price": 60,
-      "quantity": 100,
+      "quantity": 99,
       "img": "assets/inventory/orange.jpg",
       "info": "The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae, native to China. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually; varieties of sweet orange arise through mutations.",
       "id": 7
@@ -59,103 +59,45 @@
     {
       "name": "Rice",
       "price": 60,
-      "quantity": 100,
+      "quantity": 99,
       "img": "assets/inventory/rice.jpg",
       "info": "Rice is the seed of the grass species Oryza sativa or Oryza glaberrima. As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population, especially in Asia. It is the agricultural commodity with the third-highest worldwide production, after sugarcane and maize.",
-      "id": 7
+      "id": 8
     }
   ],
   "users": [
     {
-      "id": 1,
-      "userName": "Pyro",
-      "password": "MTIzNDU2Nw==",
-      "name": "Ivan",
-      "address": "123123123",
-      "paymentMethod": "Credit Card"
-    }
-  ],
-  "orders": [
-    {
-      "userId": "Pyro",
-      "date": "2019-09-17T08:51:06.955Z",
-      "item": [
-        {
-          "id": 1,
-          "name": "Apple",
-          "quantity": 1,
-          "price": 50
-        },
-        {
-          "id": 2,
-          "name": "Grapes",
-          "quantity": 1,
-          "price": 100
-        },
-        {
-          "id": 3,
-          "name": "Hotdog",
-          "quantity": 1,
-          "price": 20
-        },
-        {
-          "id": 4,
-          "name": "REFURBISHED IphoneX 128Gb FHD",
-          "quantity": 1,
-          "price": 10000
-        }
-      ],
+      "userName": "IvanFajardo",
+      "password": "MTIzNDU2",
       "id": 1
     },
     {
-      "userId": "Pyro",
-      "date": "2019-09-17T08:51:23.867Z",
-      "item": [
-        {
-          "id": 5,
-          "name": "Xiaomi Mi 9T Pro",
-          "quantity": 1,
-          "price": 19000
-        },
-        {
-          "id": 4,
-          "name": "REFURBISHED IphoneX 128Gb FHD",
-          "quantity": 1,
-          "price": 10000
-        }
-      ],
+      "userName": "Ivan",
+      "password": "MTIz",
       "id": 2
     },
     {
-      "userId": "Pyro",
-      "date": "2019-09-17T08:51:26.931Z",
-      "item": [
-        {
-          "id": 5,
-          "name": "Xiaomi Mi 9T Pro",
-          "quantity": 1,
-          "price": 19000
-        },
-        {
-          "id": 4,
-          "name": "REFURBISHED IphoneX 128Gb FHD",
-          "quantity": 1,
-          "price": 10000
-        },
-        {
-          "id": 3,
-          "name": "Hotdog",
-          "quantity": 1,
-          "price": 20
-        },
-        {
-          "id": 2,
-          "name": "Grapes",
-          "quantity": 1,
-          "price": 100
-        }
-      ],
+      "userName": "123",
+      "password": "MTIz",
       "id": 3
+    },
+    {
+      "userName": "1234",
+      "password": "MTIzNA==",
+      "id": 4
+    },
+    {
+      "userName": "Ivan1",
+      "password": "MTIz",
+      "id": 5
+    }
+  ],
+  "orders": [],
+  "cart": [
+    {
+      "id": 2,
+      "userId": "Ivan",
+      "items": []
     }
   ]
 }

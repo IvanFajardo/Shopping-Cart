@@ -3,35 +3,36 @@
     <div class="container">  
          
         <div class="row justify-content-center">  
-            
-            <div *ngFor="let item of items" class="card col-2 items">    
-                <ng-template #popContent>
-                    <p><b>{{item.name}}</b></p>
-                    <p>{{item.info}}</p>
-                </ng-template>   
-                
-                <img type= button class="row" src="{{item.img}}" height= 185px 
-                    (click)="showInfo(p1)"
-                    [ngbPopover]="popContent" [popoverTitle]="popTitle"
-                    triggers="manual" #p1="ngbPopover">
-               
-                <p class="item-name">{{item.name}}</p>               
-                <p>Stocks: {{item.quantity}}</p>
-                <p >$<strong>{{item.price * qty[item.id]}}</strong></p>
-                <div class="row ">                   
-                    <p class="col-sm-4">Qty: </p> {{qty[item.id]}}
-                    <div class="col-sm">
-                        <button class="btn btn-success qty" (click)="removeQty(item.id)">-</button>
-                        <button class="btn btn-success qty" (click)="addQty(item.id, item.quantity)">+</button>
-                    </div>
+            <ng-container *ngFor="let item of items" >
+                <ng-container *ngIf = "checkSearch(item.name)">
+                    <div class="card col-2 items">   
+                        <ng-template #popContent>
+                            <p><b>{{item.name}}</b></p>
+                            <p>{{item.info}}</p>
+                        </ng-template>   
+                        
+                        <img type= button class="row" src="{{item.img}}" height= 185px 
+                            (click)="showInfo(p1)"
+                            [ngbPopover]="popContent" [popoverTitle]="popTitle"
+                            triggers="manual" #p1="ngbPopover">
                     
-                </div>
-                
-                <button class="btn btn-success" (click)="addToCart(item.id, item.name, qty[item.id], item.price)">Add to Cart</button>
-            
-                
-                          
-            </div>           
+                        <p class="item-name">{{item.name}}</p>               
+                        <p>Stocks: {{item.quantity}}</p>
+                        <p >$<strong>{{item.price * qty[item.id]}}</strong></p>
+                        <div class="row ">                   
+                            <p class="col-sm-4">Qty: </p> {{qty[item.id]}}
+                            <div class="col-sm">
+                                <button class="btn btn-success qty" (click)="removeQty(item.id)">-</button>
+                                <button class="btn btn-success qty" (click)="addQty(item.id, item.quantity)">+</button>
+                            </div>
+                            
+                        </div>
+                        
+                        <button class="btn btn-success" (click)="addToCart(item.id, item.name, qty[item.id], item.price)">Add to Cart</button>
+                    
+                    </div>   
+                </ng-container>           
+            </ng-container>        
             
         </div>
         
