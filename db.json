@@ -3,7 +3,7 @@
     {
       "name": "Apple",
       "price": 50,
-      "quantity": 23,
+      "quantity": 0,
       "img": "assets/inventory/apple.jpg",
       "info": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "Grapes",
       "price": 100,
-      "quantity": 155,
+      "quantity": 151,
       "img": "assets/inventory/grapes.jpg",
       "info": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.",
       "id": 2
@@ -75,9 +75,12 @@
       "paymentMethod": "Credit Card"
     },
     {
+      "id": 2,
       "userName": "Ivan",
       "password": "MTIz",
-      "id": 2
+      "name": "John Ivan",
+      "address": "QC",
+      "paymentMethod": "Credit Card"
     },
     {
       "userName": "123",
@@ -245,6 +248,26 @@
         }
       ],
       "id": 6
+    },
+    {
+      "userId": "Ivan",
+      "date": "2019-09-20T09:03:00.634Z",
+      "totalPrice": 1550,
+      "item": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 23,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 4,
+          "price": 100
+        }
+      ],
+      "id": 7
     }
   ],
   "cart": [

@@ -4,7 +4,7 @@
          
         <div class="row justify-content-center">  
             <ng-container *ngFor="let item of items" >
-                <ng-container *ngIf = "checkSearch(item.name) && item.quantity > 0">
+                <ng-container *ngIf = "checkSearch(item.name)">
                     <div class="card col-2 items">   
                         <ng-template #popContent>
                             <p><b>{{item.name}}</b></p>
@@ -22,13 +22,13 @@
                         <div class="row ">                   
                             <p class="col-sm-4">Qty: </p> {{qty[item.id]}}
                             <div class="col-sm">
-                                <button class="btn btn-success qty" (click)="removeQty(item.id)">-</button>
-                                <button class="btn btn-success qty" (click)="addQty(item.id, item.quantity)">+</button>
+                                <button class="btn btn-success qty" (click)="removeQty(item.id)" [disabled]="item.quantity === 0">-</button>
+                                <button class="btn btn-success qty" (click)="addQty(item.id, item.quantity)" [disabled]="item.quantity === 0"> +</button>
                             </div>
                             
                         </div>
                         
-                        <button class="btn btn-success" (click)="addToCart(item.id, item.name, qty[item.id], item.price)">Add to Cart</button>
+                        <button class="btn btn-success" (click)="addToCart(item.id, item.name, qty[item.id], item.price)" [disabled]="item.quantity === 0">Add to Cart</button>
                     
                     </div>   
                 </ng-container>           

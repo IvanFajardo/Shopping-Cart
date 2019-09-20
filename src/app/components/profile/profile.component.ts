@@ -75,9 +75,13 @@ export class ProfileComponent implements OnInit {
     if (this.userData.password === btoa(this.passForm.get('oldPass').value)) {
       if(this.passForm.get('newPass').value === this.passForm.get('rePass').value) {
         return true;
+      } else {
+        alert('Password Mismatch');
       }
+    } else {
+      alert('Incorrect Password');
     }
-
+    
     return false;
   }
 
@@ -91,6 +95,11 @@ export class ProfileComponent implements OnInit {
         address: this.customerData.address,
         paymentMethod: this.customerData.paymentMethod
       }));
+      
+
+      alert('Password has been changed successfully!');
+      this.close();
+      this.getCustomer(this.userData.id);
     }
   }
 }

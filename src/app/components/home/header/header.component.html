@@ -11,9 +11,9 @@
 
            
             
-            <div class="small login-signup" ngbDropdown>
+            <div class="login-signup" ngbDropdown>
                 <ng-container *ngIf="isAuth">
-                    <a [routerLink]="" id="dropdownBasic1" ngbDropdownToggle>{{userData.userName}}</a><br>                    
+                    <button class="btn btn-success" [routerLink]="" id="dropdownBasic1" ngbDropdownToggle>{{userData.userName}}</button><br>                    
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item"  (click)="openModal(profile,'')" >Profile</a>
                         <a class="dropdown-item" [routerLink]="['orders']">My Orders</a>
