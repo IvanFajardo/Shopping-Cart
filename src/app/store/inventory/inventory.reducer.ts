@@ -8,7 +8,7 @@ export function InventoryReducer(state = initialState, action: ActionEx){
         case InventoryActionTypes.Get:
           // saveState('inventoryItems', store);
 
-          return action.payload ;
+          return state;
         
         case InventoryActionTypes.GetSuccess:
           console.log('Success: ' + action.payload);

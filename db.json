@@ -3,7 +3,7 @@
     {
       "name": "Apple",
       "price": 50,
-      "quantity": 28,
+      "quantity": 23,
       "img": "assets/inventory/apple.jpg",
       "info": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "Grapes",
       "price": 100,
-      "quantity": 166,
+      "quantity": 155,
       "img": "assets/inventory/grapes.jpg",
       "info": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.",
       "id": 2
@@ -19,7 +19,7 @@
     {
       "name": "Hotdog",
       "price": 20,
-      "quantity": 158,
+      "quantity": 149,
       "img": "assets/inventory/hotdog.jpg",
       "info": "The hot dog or dog is a grilled or steamed link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It can also refer to the sausage itself. The sausage used is the wiener or frankfurter. The names of these sausages also commonly refer to their assembled sandwiches. ",
       "id": 3
@@ -27,7 +27,7 @@
     {
       "name": "REFURBISHED IphoneX 128Gb FHD",
       "price": 10000,
-      "quantity": 1,
+      "quantity": 99,
       "img": "assets/inventory/iphone.jpg",
       "info": "The iPhone X was Apple's flagship 10th anniversary iPhone featuring a 5.8-inch OLED display, facial recognition and 3D camera functionality, a glass body, and an A11 Bionic processor. Launched November 3, 2017, discontinued with the launch of the iPhone XR, XS, and XS Max.",
       "id": 4
@@ -35,7 +35,7 @@
     {
       "name": "Xiaomi Mi 9T Pro",
       "price": 19000,
-      "quantity": -66,
+      "quantity": 99,
       "img": "assets/inventory/mi9.jpg",
       "info": "Well, it’s finally here. Xiaomi’s flagship smartphone, the Mi 9T Pro has launched in the Philippines. It’s the global version of the Redmi K20 Pro for the Chinese market and features a 6.39-inch AMOLED screen, Snapdragon 855 chipset, and triple rear cameras.",
       "id": 5
@@ -43,7 +43,7 @@
     {
       "name": "Samsung Galaxy Note 10",
       "price": 200,
-      "quantity": 1,
+      "quantity": 100,
       "img": "assets/inventory/note.jpg",
       "info": "The Note 10 has a 6.3-inch AMOLED display with a Full HD resolution, coming in at 2280 x 1080 pixels, with 401 pixels per inch. It includes HDR 10+ technology, and considering that Samsung hasn't opted for a QHD display here we're impressed with how the display looks.",
       "id": 6
@@ -51,7 +51,7 @@
     {
       "name": "Orange",
       "price": 60,
-      "quantity": 99,
+      "quantity": 60,
       "img": "assets/inventory/orange.jpg",
       "info": "The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae, native to China. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually; varieties of sweet orange arise through mutations.",
       "id": 7
@@ -67,9 +67,12 @@
   ],
   "users": [
     {
+      "id": 1,
       "userName": "IvanFajardo",
       "password": "MTIzNDU2",
-      "id": 1
+      "name": "Ivan",
+      "address": "qc",
+      "paymentMethod": "Credit Card"
     },
     {
       "userName": "Ivan",
@@ -92,12 +95,182 @@
       "id": 5
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "userId": "Ivan",
+      "date": "2019-09-20T01:50:42.496Z",
+      "totalPrice": 230,
+      "item": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 1,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        },
+        {
+          "id": 7,
+          "name": "Orange",
+          "quantity": 1,
+          "price": 60
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": "IvanFajardo",
+      "date": "2019-09-20T01:51:21.464Z",
+      "totalPrice": 170,
+      "item": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 1,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": "Ivan",
+      "date": "2019-09-20T01:51:38.311Z",
+      "totalPrice": 230,
+      "item": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 1,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        },
+        {
+          "id": 7,
+          "name": "Orange",
+          "quantity": 1,
+          "price": 60
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userId": "Ivan",
+      "date": "2019-09-20T01:51:45.095Z",
+      "totalPrice": 180,
+      "item": [
+        {
+          "id": 7,
+          "name": "Orange",
+          "quantity": 1,
+          "price": 60
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userId": "IvanFajardo",
+      "date": "2019-09-20T03:23:59.205Z",
+      "totalPrice": 29000,
+      "item": [
+        {
+          "id": 4,
+          "name": "REFURBISHED IphoneX 128Gb FHD",
+          "quantity": 1,
+          "price": 10000
+        },
+        {
+          "id": 5,
+          "name": "Xiaomi Mi 9T Pro",
+          "quantity": 1,
+          "price": 19000
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userId": "Ivan",
+      "date": "2019-09-20T06:55:42.531Z",
+      "totalPrice": 40,
+      "item": [
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 2,
+          "price": 20
+        }
+      ],
+      "id": 6
+    }
+  ],
   "cart": [
     {
-      "id": 2,
-      "userId": "Ivan",
-      "items": []
+      "id": 1,
+      "userId": "IvanFajardo",
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "quantity": 1,
+          "price": 50
+        },
+        {
+          "id": 2,
+          "name": "Grapes",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": 3,
+          "name": "Hotdog",
+          "quantity": 1,
+          "price": 20
+        }
+      ]
     }
   ]
 }

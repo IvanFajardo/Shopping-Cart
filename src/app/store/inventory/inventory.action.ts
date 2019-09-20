@@ -9,10 +9,8 @@ export class ActionEx implements Action {
   readonly type;
   payload: any;
 }
-export class InventoryGet implements ActionEx {
+export class InventoryGet implements Action {
   readonly type = InventoryActionTypes.Get;
-  constructor(public payload: any) {
-  }
 }
 
 export class InventoryGetSuccess implements ActionEx {

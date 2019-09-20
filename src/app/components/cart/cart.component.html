@@ -21,6 +21,7 @@
             </thead>
             
             <tbody>
+
                 
                 <tr *ngFor="let item of cart; let i=index">
                     <td>{{i+1}}</td>
@@ -33,9 +34,13 @@
                     <td>${{item.price * item.quantity}}</td>
                     <td>
                         <button style="float: right" (click)="removeFromCart(i,item.id,item.quantity)">Remove</button>
-                    </td>
-                    
+                    </td> 
                 </tr>
+                <ng-container *ngIf="cart.length === 0">
+                        <tr>
+                            <td colspan="5">No Items in the cart</td>
+                        </tr>
+                    </ng-container>
             
 
             </tbody>
@@ -45,7 +50,7 @@
             
     </div>
 
-    <div class="card-footer">
+    <div *ngIf="cart.length > 0" class="card-footer" >
         <div class="row">
             <p class="col-sm">Price: <b>${{totalPrice}}</b></p> 
             <button class="btn btn-primary col-sm-3" (click)="checkOut()">Checkout</button>

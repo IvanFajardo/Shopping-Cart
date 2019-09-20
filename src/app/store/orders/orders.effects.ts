@@ -11,7 +11,7 @@ export class OrdersEffects {
 
     @Effect() getOrders$ = this.action$.pipe(
         ofType(OrdersActionTypes.Get),
-        switchMap((data: any) => this.databaseService.getJson('orders', data.payload)),
+        switchMap((data: any) => this.databaseService.getJson('orders',  data.payload)),
         map(items => new OrdersGetSuccess(items) ) );
 
  }

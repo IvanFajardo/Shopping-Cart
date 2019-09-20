@@ -74,7 +74,7 @@ export class ItemsComponent implements OnInit {
 
   getItems(){
 
-    this.store.dispatch(new InventoryGet(''));
+    this.store.dispatch(new InventoryGet());
 
     this.subscription = this.store.select('inventory').subscribe(data => {
       this.items = data;
@@ -86,9 +86,6 @@ export class ItemsComponent implements OnInit {
       if(this.items.length > 0){
         this.subscription.unsubscribe();
       }
-      
-      
-      
     });
     
 
@@ -129,6 +126,7 @@ export class ItemsComponent implements OnInit {
     console.log(newCart);
     
     this.store.dispatch(new CartAdd(newCart));
+    this.qty[id] = 1;
   }
 
   addQty(id, max) {

@@ -4,7 +4,7 @@
          
         <div class="row justify-content-center">  
             <ng-container *ngFor="let item of items" >
-                <ng-container *ngIf = "checkSearch(item.name)">
+                <ng-container *ngIf = "checkSearch(item.name) && item.quantity > 0">
                     <div class="card col-2 items">   
                         <ng-template #popContent>
                             <p><b>{{item.name}}</b></p>

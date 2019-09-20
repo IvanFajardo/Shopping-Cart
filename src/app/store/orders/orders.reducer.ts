@@ -7,7 +7,7 @@ export function OrdersReducer(state = initialState, action: ActionEx) {
     switch (action.type) {
         case OrdersActionTypes.Get:
           console.log('Get: ' + store);
-          return action.payload ;
+          return;
 
         case OrdersActionTypes.GetSuccess:
           console.log('Success: ' + action.payload);

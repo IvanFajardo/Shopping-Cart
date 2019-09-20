@@ -127,6 +127,8 @@ export class CartComponent implements OnInit {
         });
 
         this.store.dispatch(new CartCheckout(json));
+        alert('Checkout Success!');
+        
         this.close();
       }
     } else {

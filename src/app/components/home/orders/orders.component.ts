@@ -9,22 +9,25 @@ import { OrdersGet } from 'src/app/store/orders/orders.action';
 })
 export class OrdersComponent implements OnInit {
 
-  private orders;
+  private orders: any[];
+  private userData;
 
   constructor(private store: Store<any>) { }
 
   ngOnInit() {
+    this.userData = JSON.parse(localStorage.getItem('userData'));
+    console.log(this.userData.userName);
+    this.store.dispatch(new OrdersGet('?userId=' + this.userData.userName));
+
     this.getOrders();
 
-    console.log('EZ');
-    
+    // console.log('EZ');
+
   }
 
   getOrders() {
-    this.store.dispatch(new OrdersGet(''));
     this.store.select('orders').subscribe(data => {
       this.orders = data;
-
       console.log(this.orders);
       
     });

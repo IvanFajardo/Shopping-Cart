@@ -17,6 +17,6 @@ export class InventoryEffects {
     @Effect() updateItems$ = this.action$.pipe(
         ofType(InventoryActionTypes.Update),
         switchMap((action: any) => this.databaseService.updateJson('items', action.payload.id, action.payload)),
-        map(() => new InventoryGet('') ) );
+        map(() => new InventoryGet() ) );
 
  }
